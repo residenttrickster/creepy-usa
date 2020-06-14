@@ -1,0 +1,14 @@
+<h1><p style="color:#BE3D21";>PERSONAL PAGE</h1></p>
+
+<p><b> Name:</b> <%= @user.username %> <p>
+
+<p><b> About me:</b> <%= @user.bio %> <p>
+
+<p><b> List of my stories: </b> <p>
+
+<%= button_to "Update", edit_user_path(@user), :method => :get %>
+<br>
+<%= button_to "See all creeps", users_path, :method => :get %>
+<br>
+<%= button_to "BIG RED BUTTON OF SELF-DESTRUCTION", user_path(@user), :method => :delete %>
+

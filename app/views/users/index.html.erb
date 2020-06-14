@@ -1,0 +1,12 @@
+<h1><p style="color:#BE3D21";>THOSE WHO ALREADY COMMITTED...</h1></p>
+
+<body>
+
+<% @users.each do |user| %>
+<%= link_to user.username, user_path(user) %>
+<br>
+<br>
+<% end %> 
+</body>
+
+<%= button_to "Turn into one of us", new_user_path, :method => :get %>

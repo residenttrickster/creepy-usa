@@ -1,0 +1,7 @@
+<h1><p style="color:#BE3D21";><center> <%= @story.title %> </center></h1>
+<br>
+<br>
+<body> <%= @story.body%> </body>
+<hr>
+<br>
+<%= button_to "List of stories", stories_path, :method => :get%>
