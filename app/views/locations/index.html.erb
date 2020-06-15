@@ -1,0 +1,8 @@
+<h1><p style="color:#BE3D21";>EXPLORE THE LOCATION</h1></p>
+
+<body>
+<% @locations.each do |location| %>
+<%= link_to location.state, location_path(location) %>
+<br>
+<% end %> 
+</body>

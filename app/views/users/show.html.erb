@@ -4,9 +4,15 @@
 
 <p><b> About me:</b> <%= @user.bio %> <p>
 
-<p><b> List of my stories: </b> <p>
+<p><b> List of my stories: </b> <% @user.stories.each do |story|%>
+<%= link_to story.title, story_path(story) %>
+<br>
+<br>
+<% end %> <p>
 
 <%= button_to "Update", edit_user_path(@user), :method => :get %>
+<br>
+<%= button_to "Tell us a story", new_story_path, :method => :get %>
 <br>
 <%= button_to "See all creeps", users_path, :method => :get %>
 <br>

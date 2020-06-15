@@ -17,8 +17,25 @@ class StoriesController < ApplicationController
 
     def create
         @story = Story.create(story_params)
-        render_to story_path(@story)
+        redirect_to user_path(@story.user_id)
     end
+
+    def edit
+        @story = story_find
+        render :edit 
+    end 
+
+    def update
+        @story = story_find
+        @story.update(story_params)
+        redirect_to story_path(@story)
+    end 
+
+    def destroy
+        @story = story_find
+        @story.destroy
+        redirect_to user_path(@story.user_id)
+    end 
 
     private
 
@@ -27,7 +44,7 @@ class StoriesController < ApplicationController
     end 
 
     def story_params
-        params.require(:story).permit(:title, :body)
+        params.require(:story).permit(:title, :body, :location_id, :user_id)
     end 
 
 end

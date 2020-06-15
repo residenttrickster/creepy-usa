@@ -3,4 +3,10 @@
 <% @stories.each do |story| %>
 <%= link_to story.title, story_path(story) %>
 <br>
+<br>
 <% end %>
+<br>
+<%= button_to "List of our beloved users", users_path, :method => :get %>
+<br>
+<br>
+<%= button_to "Check the stories by location", locations_path, :method => :get %>

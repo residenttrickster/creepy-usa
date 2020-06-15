@@ -1,0 +1,28 @@
+<center><h1><p style="color:#BE3D21";> EDIT ME &#9824; </h1></p></center>
+
+
+<%= form_for @story do |f| %>
+    <%= f.label "What's your name again?" %> 
+    <%= f.collection_select :user_id, User.all, :id, :username %>
+    <br>
+    <br>
+    <%= f.label "What is your story about?" %>
+    <%= f.text_field :title %>
+    <br>
+    <br>
+    <%= f.label "So, tell us what happened:" %>
+    <%= f.text_field :body, style: 'height:50px;' %>
+    <br>
+    <br>
+    <%= f.label "And where it happened?" %>
+    <%= f.collection_select :location_id, Location.all, :id, :state %>
+    <br>
+    <br>
+    <%= f.label "Choose a genre" %>
+    <br>
+    <br>
+    <%= f.label "Any warnings?" %>
+    <br>
+    <br>
+    <%= f.submit "DONE EDITING" %>
+<% end %>

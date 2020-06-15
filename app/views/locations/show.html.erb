@@ -1,0 +1,7 @@
+<h1><center> <p style="color:#BE3D21";> Stories from <%= @location.state %> </p></center></h1>
+
+<% @location.stories.each do |story| %>
+<%= link_to story.title, story_path(story) %>
+<br>
+<br>
+<% end %>
