@@ -65,17 +65,6 @@ body: "The story of Slaughterhouse Canyon takes place during the Gold Rush. Duri
 The legend states that if you go down to Slaughterhouse Canyon at night, even now, you will hear the loud, anguished cries of the mother who lost her mind.",
 user_id:1, location_id:4)
 
-# g1 = Genre.create!([
-#     name: "Ghost story",
-#     name: "Vampire story",
-#     name: "General paranormal",
-#     name: "Survival horror",
-#     name: "Occult",
-#     name: "Sci-fi",
-#     name: "Cursed place",
-#     name: "True crime",
-#     name: "Monster"
-# ])
 
 # c1 = Caution.create!([
     #     name: "Choose Not To Use Warnings",

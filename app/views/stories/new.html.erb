@@ -18,7 +18,8 @@
     <%= f.collection_select :location_id, Location.all, :id, :state %>
     <br>
     <br>
-    <%= f.label "Choose a genre" %>
+    <%= f.label "Now choose a category!" %>
+    <%= f.text_field :genres %>
     <br>
     <br>
     <%= f.label "Any warnings?" %>

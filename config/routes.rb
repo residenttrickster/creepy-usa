@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :cautions
-  resources :genres
+  resources :cautions, only: [:index, :show, :new, :create]
+  resources :genres, only: [:index, :show, :new, :create]
   resources :stories, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :locations, only: [:index, :show]
   resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy]
