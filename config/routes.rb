@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index', "welcome#index"
   resources :story_cautions, only: [:new, :create]
   resources :story_genres, only: [:new, :create]
   resources :cautions, only: [:index, :show, :new, :create]
