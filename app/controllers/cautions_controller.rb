@@ -15,7 +15,7 @@ class CautionsController < ApplicationController
     end 
 
     def create
-        caution_params = params.permit(:caution).require(:name, :story_id)
+        caution_params = params.permit(:caution).require(:name)
         @caution = Caution.create(caution_params)
         redirect_to caution_path(@caution)
 

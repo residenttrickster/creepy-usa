@@ -1,13 +1,9 @@
-<h1> ASSIGN A GENRE </h1>
+<h1> CREATE A GENRE </h1>
 
 
 <%= form_for @genre do |f| %>
     <%= f.label "NAME" %>
     <%= f.text_field :name %>
-    <br>
-    <br>
-    <%= f.label "STORY TO ASSOSIATE" %>
-    <%= f.collection_select :story_id, Story.all, :id, :title %>
     <br>
     <br>
     <%= f.submit %>

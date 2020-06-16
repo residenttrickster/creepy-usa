@@ -17,8 +17,14 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
-        redirect_to user_path(@user)
+            if @user.valid?
+            redirect_to user_path(@user)
+            else   
+            flash[:errors] = @user.errors.full_messages
+            redirect_to new_user_path
+            end 
     end 
+
 
     def edit
         @user = user_find
@@ -35,6 +41,10 @@ class UsersController < ApplicationController
         @user = user_find
         @user.destroy
         redirect_to users_path
+    end 
+
+    def sort
+        @users = User.all
     end 
 
     private

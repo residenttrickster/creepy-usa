@@ -1,0 +1,2 @@
+class StoryCautionsController < ApplicationController
+end

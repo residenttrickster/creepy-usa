@@ -16,7 +16,7 @@ class GenresController < ApplicationController
     end 
 
     def create
-        genre_params = params.require(:genre).permit(:name, :story_id)
+        genre_params = params.require(:genre).permit(:name)
         @genre = Genre.create(genre_params)
         redirect_to genre_path(@genre)
     end 

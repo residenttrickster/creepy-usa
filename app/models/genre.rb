@@ -1,3 +1,5 @@
 class Genre < ApplicationRecord
-  belongs_to :story
+  has_many :story_genres
+  has_many :stories, through: :story_genres
+
 end

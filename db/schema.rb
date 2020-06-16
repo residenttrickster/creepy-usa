@@ -10,22 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_200829) do
+ActiveRecord::Schema.define(version: 2020_06_15_153400) do
 
   create_table "cautions", force: :cascade do |t|
     t.string "name"
-    t.integer "story_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["story_id"], name: "index_cautions_on_story_id"
   end
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
-    t.integer "story_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["story_id"], name: "index_genres_on_story_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -45,6 +41,24 @@ ActiveRecord::Schema.define(version: 2020_06_12_200829) do
     t.index ["user_id"], name: "index_stories_on_user_id"
   end
 
+  create_table "story_cautions", force: :cascade do |t|
+    t.integer "story_id", null: false
+    t.integer "caution_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["caution_id"], name: "index_story_cautions_on_caution_id"
+    t.index ["story_id"], name: "index_story_cautions_on_story_id"
+  end
+
+  create_table "story_genres", force: :cascade do |t|
+    t.integer "story_id", null: false
+    t.integer "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_story_genres_on_genre_id"
+    t.index ["story_id"], name: "index_story_genres_on_story_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.text "bio"
@@ -52,8 +66,10 @@ ActiveRecord::Schema.define(version: 2020_06_12_200829) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "cautions", "stories"
-  add_foreign_key "genres", "stories"
   add_foreign_key "stories", "locations"
   add_foreign_key "stories", "users"
+  add_foreign_key "story_cautions", "cautions"
+  add_foreign_key "story_cautions", "stories"
+  add_foreign_key "story_genres", "genres"
+  add_foreign_key "story_genres", "stories"
 end

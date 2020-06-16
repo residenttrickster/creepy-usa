@@ -17,7 +17,13 @@ class StoriesController < ApplicationController
 
     def create
         @story = Story.create(story_params)
+        @story_genre = StoryGenre.create(story_id: @story.id, genre_id: params[:story][:cautions])
+        # @story_genre = @story.story_genres
+        # @story_genre.create(story_id: @story.id, genre_id: params[:story][:genres])
+        # @story_caution = StoryCaution.create(story_id: @story.id, caution_id: params[:story][:cautions])
+        
         redirect_to user_path(@story.user_id)
+        # byebug
     end
 
     def edit

@@ -19,10 +19,11 @@
     <br>
     <br>
     <%= f.label "Now choose a category!" %>
-    <%= f.text_field :genres %>
+    <%= f.collection_select :genres, Genre.all, :id, :name %>
     <br>
     <br>
     <%= f.label "Any warnings?" %>
+    <%= f.collection_select :cautions, Caution.all, :id, :name %>
     <br>
     <br>
     <%= f.submit "Take a deep breath & send" %>

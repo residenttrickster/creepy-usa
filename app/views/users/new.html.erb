@@ -1,3 +1,11 @@
+<% if flash[:errors].present? %>
+    <% flash[:errors].each do |error| %>
+    <p>  <p style="color:red"><b> <%= error %> </b>  <p style="color:red"></p>
+    <% end %>
+<% end %>
+
+
+
 <center><h1><p style="color:#BE3D21";>WELCOME, DELICIOUS FRIEND!</h1></p></center>
 <center><h3><p style="color:#BE3D21";>TELL US SOMETHING.</h3></p></center>
 <center><h3><p style="color:#BE3D21";>MAYBE IT WILL KEEP YOU SAVE.</h3></p></center>

@@ -65,10 +65,23 @@ body: "The story of Slaughterhouse Canyon takes place during the Gold Rush. Duri
 The legend states that if you go down to Slaughterhouse Canyon at night, even now, you will hear the loud, anguished cries of the mother who lost her mind.",
 user_id:1, location_id:4)
 
+g1 = Genre.create(name: "Ghost story")
+g2 = Genre.create(name: "Vampire story")
+g3 = Genre.create(name: "Monster story")
+g4 = Genre.create(name: "Sci-fi")
+g5 = Genre.create(name: "General paranormal")
+g6 = Genre.create(name: "True crime")
+g7 = Genre.create(name: "Cursed place")
+g8 = Genre.create(name: "Occultism")
 
-# c1 = Caution.create!([
-    #     name: "Choose Not To Use Warnings",
-    #     name: "No Warnings Apply",
-    #     name: "Graphic Depictions Of Violence",
-    #     name: "Rape",
-    #     name: "Explicit content"
+
+
+c1 = Caution.create(name: "Choose Not To Use Warnings")
+c2 = Caution.create(name: "No Warnings Apply")  
+c3 = Caution.create(name: "Graphic Depictions Of Violence") 
+c4 = Caution.create(name: "Rape")   
+c5 = Caution.create(name: "Explicit content") 
+
+sg1 = StoryGenre.create(story_id:1, genre_id:1)
+
+sc1 = StoryCaution.create(story_id:1, caution_id:1)

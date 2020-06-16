@@ -2,7 +2,7 @@
 
 <center><h3>State: <%= link_to @story.location.state, location_path(@story.location_id) %> </h3></center>
 
-<center><h3> Genre: <%= @story.genres.name %> </h3></center>
+<center><h3>Genre: <%= @story_genre %> </h3></center>
 
 <center><h3>by <%= link_to @story.user.username, user_path(@story.user_id) %> </h3></center>
 <br>
