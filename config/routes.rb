@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index', "welcome#index"
+get 'login', to: 'sessions#new'
+post 'login', to: 'sessions#create'
+get 'welcome', to: 'sessions#welcome'
+get 'logout', to: 'sessions#destroy', as: 'logout'
   resources :story_cautions, only: [:new, :create]
   resources :story_genres, only: [:new, :create]
   resources :cautions, only: [:index, :show, :new, :create]
@@ -10,4 +13,5 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
 
