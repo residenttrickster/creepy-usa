@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :locations, only: [:index, :show]
   resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
-  get '/users_sort', to: "users#sort", as: "users_sort"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
