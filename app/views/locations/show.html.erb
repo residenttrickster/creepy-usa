@@ -1,7 +1,9 @@
 <h1><center> <p style="color:#BE3D21";> Stories from <%= @location.state %> </p></center></h1>
 
+<section id="info">
 <% @location.stories.each do |story| %>
-<%= link_to story.title, story_path(story) %>
+&#128128; <%= link_to story.title, story_path(story), class: 'link_color' %>
 <br>
 <br>
 <% end %>
+<section id="info">

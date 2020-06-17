@@ -1,22 +1,23 @@
-<h1><p style="color:#BE3D21";>THOSE WHO ALREADY COMMITTED...</h1></p>
+<link rel="stylesheets" href="application.css" >
+<h1><p style="color:#BE3D21";>THOSE WHO ALREADY COMMITTED</h1></p>
 
+<section id="info">
 <body>
-
 <% @users.each do |user| %>
-<%= link_to user.username, user_path(user) %>
+&#128128; <%= link_to user.username, user_path(user), class: 'link_color' %>
 <br>
 <br>
 <% end %> 
 </body>
 <br>
-<br>
 <%= button_to "Turn into one of us", new_user_path, :method => :get %>
-<br>
 <br>
 <%= button_to "See all the stories", stories_path, :method => :get %>
 <br>
-<br>
 <%= button_to "Search by location", locations_path, :method => :get %>
 <br>
-<br>
-<%= button_to "Back to welcome page", 'welcome', :method => :get %>
+<%= button_to "Back to welcome page", 'welcome', :method => :get %> 
+</section>
+
+
+<center> ⛧ Ŗ̴̫͓̗̱̑͑͠ ̷̡̙̪̇͛̚͠U̸̢̟̘͊̏̾ ̴̨̟̣̫̇̎͜N̶̯͛͆̑ ⛧ </center>

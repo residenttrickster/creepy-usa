@@ -1,8 +1,11 @@
+<center> <img src="https://img.theculturetrip.com/768x432/wp-content/uploads/2017/11/6440371967_2c44dbd2a2_b.jpg">
 <h1><p style="color:#BE3D21";>EXPLORE THE LOCATION</h1></p>
-
+<section id="info">
 <body>
 <% @locations.each do |location| %>
-<%= link_to location.state, location_path(location) %>
+&#128128; <%= link_to location.state, location_path(location), class: 'link_color' %>
 <br>
 <% end %> 
 </body>
+</center>
+</section">

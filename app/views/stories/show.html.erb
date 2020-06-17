@@ -1,6 +1,6 @@
 <h1><p1 style="color:#BE3D21";><center> <%= @story.title %> </center></p1></h1>
 
-<center><h3>State: <%= link_to @story.location.state, location_path(@story.location_id) %> </h3></center>
+<center><h3>State: <%= link_to @story.location.state, location_path(@story.location_id), class: 'link_color_spec' %> </h3></center>
 
 <% @story.genres.each do |genre| %>
 <center><h3>Genre: <%= genre.name %> </h3></center>
@@ -10,7 +10,7 @@
 <center><h3>Warning: <%= caution.name %> </h3></center>
 <% end %>
 
-<center><h3>by <%= link_to @story.user.username, user_path(@story.user_id) %> </h3></center>
+<center><h3>by <%= link_to @story.user.username, user_path(@story.user_id), class: 'link_color_spec' %> </h3></center>
 <br>
 <br>
 <body> <%= @story.body%> </body>
