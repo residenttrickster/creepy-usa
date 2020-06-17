@@ -13,10 +13,8 @@ Built using Ruby on Rails and Active Record.
 - Once you all set, run 'rails s' to start the server. 
 
 # Functionality 
-Login or create an account
-Walk a dog
-See upcoming appointments
-Change appointments
-Cancel appointments
-See a list of dogs that you've walked
+- Welcome menu: you can choose to sign up (unique username only!) or continue to the main page (list of registered userd)
+- List of users: check the user's account and their storie, check the list of all availiable stories, check the stories by location
+- User menu: update user information, delete an account, add a story, read stories
+- Story menu: read, update, delete 
 
