@@ -1,0 +1,16 @@
+<h1><p style="color:#BE3D21";> LIST OF STORIES &#9827; </h1>
+
+<section id="info">
+<% @stories.each do |story| %>
+&#128128; <%= link_to story.title, story_path(story), class: 'link_color' %>
+<br>
+<br>
+<% end %>
+<br>
+</section>
+<%= button_to "List of our beloved users", users_path, :method => :get %>
+<br>
+<br>
+<%= button_to "Check the stories by location", locations_path, :method => :get %>
+
+<center> ⛧ Ŗ̴̫͓̗̱̑͑͠ ̷̡̙̪̇͛̚͠U̸̢̟̘͊̏̾ ̴̨̟̣̫̇̎͜N̶̯͛͆̑ ⛧ </center>

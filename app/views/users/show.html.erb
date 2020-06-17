@@ -1,0 +1,26 @@
+<link rel="stylesheets" href="application.css" >
+
+<h1><p style="color:#BE3D21";>PERSONAL PAGE</h1></p>
+
+<section id="info">
+<p><b> Name:</b> <%= @user.username %> <p>
+
+<p><b> About me:</b> <%= @user.bio %> <p>
+
+<p><b> List of my stories: </b> 
+<br>
+<% @user.stories.each do |story|%>
+&#128128; <%= link_to story.title, story_path(story), class: 'link_color_spec' %>
+<br>
+<br>
+<% end %> <p>
+</section>
+
+<%= button_to "Update", edit_user_path(@user), :method => :get %>
+<br>
+<%= button_to "Tell us a story", new_story_path, :method => :get %>
+<br>
+<%= button_to "See all creeps", users_path, :method => :get %>
+<br>
+<%= button_to "BIG RED BUTTON OF SELF-DESTRUCTION", user_path(@user), :method => :delete %>
+

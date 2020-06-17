@@ -1,0 +1,37 @@
+<link rel="stylesheets" href="application.css" >
+
+<% if flash[:errors].present? %>
+    <% flash[:errors].each do |error| %>
+    <p>  <p style="color:red"><b> <%= error %> </b>  <p style="color:red"></p>
+    <% end %>
+<% end %>
+
+
+
+<center><h1><p style="color:#BE3D21";>WELCOME, DELICIOUS FRIEND!</h1></p></center>
+<center><h3><p style="color:#BE3D21";>TELL US SOMETHING</h3></p></center>
+<center><h3><p style="color:#BE3D21";>MAYBE IT WILL KEEP YOU SAVE</h3></p></center>
+<center><h4><p style="color:#BE3D21";> (not really) </h4></p></center>
+
+
+<%= form_for @user do |f| %>
+    <%= f.label "How should we call you?" %>
+    <%= f.text_field :username %>
+    <br>
+    <br>
+    <%= f.label "Tell us your password, plz:" %>
+    <%= f.text_field :password_digest %>
+    <br>
+    <br>
+    <%= f.label "Now tell us somethig delightful!" %>
+    <%= f.text_field :bio %>
+    <br>
+    <br>
+    <%= f.submit "Commit" %>
+<% end %>
+
+
+
+
+<center> ☠ N̵̤͉̐̊Ó̷̰̩̜̲̼̓͒̔T̶͖̻̏̅͗̂Ĥ̵͚̓͆͌Ḯ̸͇̓N̶̘̯̪̺̞̎̿Ğ̸̡̛̰̘ ̷̪̓́S̷̫̻̺̈Ą̶̣̯͎͒̍͑F̸̻̹̦̼̓́̓̈̚E̸̩̗͓̐̍͌ ̷̛͔̃̈̓̓H̴̢͉̬͍̏̀̋͂E̷̯̞̽̀̇Ȑ̶͈͈̀É̷͚̺̑̓̀͆ ψ </center>
+

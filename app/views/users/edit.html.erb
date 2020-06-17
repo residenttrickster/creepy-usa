@@ -1,0 +1,20 @@
+<link rel="stylesheets" href="application.css" >
+
+<h1><p style="color:#BE3D21";> Changes are fun. I love changes. &#9829; </h1>
+
+
+<%= form_for @user do |f| %>
+    <%= f.label "How should we call you?" %>
+    <%= f.text_field :username %>
+    <br>
+    <br>
+    <%= f.label "Tell us your password, plz:" %>
+    <%= f.text_field :password_digest %>
+    <br>
+    <br>
+    <%= f.label "Now tell us somethig delightful!" %>
+    <%= f.text_field :bio %>
+    <br>
+    <br>
+    <%= f.submit "Commit" %>
+<% end %>
